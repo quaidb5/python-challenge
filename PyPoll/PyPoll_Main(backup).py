@@ -77,10 +77,10 @@ with open(csvpath, newline='') as csvfile:
     Li_percent = Li_votes / Total_votes
     Tooley_percent = Tooley_votes / Total_votes
 
-    print("Khan: " + str(round(Khan_percent*100,2)) + "% (" + str(Khan_votes) + ")")
-    print("Correy: " + str(round(Correy_percent*100,2)) + "% (" + str(Correy_votes) + ")")
-    print("Li: " + str(round(Li_percent*100,2)) + "% (" + str(Li_votes) + ")")
-    print("O'Tooley: " + str(round(Tooley_percent*100,2)) + "% (" + str(Tooley_votes) + ")")
+    print("Correy: " + str(Correy_percent) + " (" + str(Correy_votes) + ")")
+    print("Khan: " + str(Khan_percent) + " (" + str(Khan_votes) + ")")
+    print("Li: " + str(Li_percent) + " (" + str(Li_votes) + ")")
+    print("O'Tooley: " + str(Tooley_percent) + " (" + str(Tooley_votes) + ")")
     print("-----------------------------------------------")
 
     # Determining winner
@@ -94,5 +94,3 @@ with open(csvpath, newline='') as csvfile:
         print("Winner: Li")
     elif Tooley_votes > Correy_votes and Tooley_votes > Khan_votes and Tooley_votes > Li_votes:
         print("Winner Tooley")
-    
-    print("-----------------------------------------------")
